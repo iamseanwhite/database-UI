@@ -1,0 +1,44 @@
+<h1>Enter your exercises!</h1>
+<form method="post">
+
+	<label for="toDoName">Name:</label>
+	  <input type="text" id= "name" name="name">
+
+    <label for="toDoRep">Reps:</label>
+	  <input type="text" id= "reps" name="reps">
+
+	<label for="toDoWeight">Weight:</label>
+	 <input type="text" id= "weight" name="weight">
+
+	<label for="toDoDate">Date:</label>
+	 <input type="date" id= "date" name="date">
+
+	<label for="toDoTemp">Unit:</label>
+	 <input type="radio" id= "lbs" name="unit" value="lbs" checked>lbs
+	 <input type="radio" id= "kgs" name="unit" value="kgs">kg
+
+	  <input type="submit" id = "Submit" name="Add Exercise" value="Add Exercise">
+
+</form>
+
+{{!-- <h1>MySQL results:</h1> --}}
+{{!-- <p>{{results}}</p> --}}
+
+{{!-- <h2>Id results:</h2> --}}
+<p>{{idResults}}</p>
+
+
+<h1>Exercise Table:</h1>
+
+<table id= "myTable">
+ <caption>Exercises</caption>
+ <thead>
+  <tr>
+   <th> Name
+   <th> Reps
+   <th> Weight
+   <th> Date
+   <th> Unit
+ <tbody id="tbody">
+
+</table>

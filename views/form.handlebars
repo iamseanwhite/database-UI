@@ -1,0 +1,37 @@
+<h1>Enter your exercises!</h1>
+<h2>You have {{toDoCount}} items on your to do list.</h2>
+<form method="post">
+
+	<label for="toDoName">Name:</label>
+	  <input type="text" name="name" id="toDoName">
+
+    <label for="toDoCity">Reps:</label>
+	  <input type="text" name="reps" id="toDoRep">
+
+	<label for="toDoState">Weight:</label>
+	 <input type="text" name="weight" id="toDoWeight">
+
+	<label for="toDoTemp">Date:</label>
+	 <input type="text" name="date" id="toDoDate">
+
+	<label for="toDoTemp">Lbs:</label>
+	 <input type="text" name="lbs" id="toDoLbs">
+
+	  <input type="submit" name="Add Exercise" value="Add Exercise">
+</form>
+
+{{#if color}}
+{{#if toDo}}
+<ul>
+  {{#each toDo}}
+  <li>
+    <h3 style="background-color:yellow;">{{this.name}} in {{this.city}}, {{this.state}} at {{this.temp}} degrees {{this.color}}</h3>
+  	
+     <form method="post">
+      <input type="hidden" name="id" value="{{this.id}}">	
+      <input type="submit" name="Done" value="Mark as Done">
+    </form>
+  </li>
+  {{/each}}
+</ul>
+{{/if}}
